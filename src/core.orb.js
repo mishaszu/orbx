@@ -1,5 +1,8 @@
+// TODO link functions should be in prototype
 const link = {
-  orbs: [],
+  spawn() {
+    return Object.assign({...this}, {orbs: []});
+  },
   orb(b){
     Object.keys(b).forEach(k => {
       if(this[k] !== undefined) {
@@ -10,7 +13,7 @@ const link = {
       Object.create(this),
       b,
       {
-        render: b.prototype.constructor,
+        render: b.__proto__.constructor,
         name: b.name,
         up: this.up,
         down: this.down,
@@ -55,27 +58,29 @@ const link = {
   }
 }
 
-console.time('test')
-function App() {console.log('test')}
-console.log('App; ', App.prototype)
-App.prototype.constructor()
-App.a = 1 
-const obj1 = link.orb(App);
-console.log(obj1);
-obj1.render()
+// console.time('test')
+// function App() {console.log('test')}
+// console.log('App; ', App.prototype)
+// App.prototype.constructor()
+// App.a = 1
+// const obj1 = link.orb(App);
+// console.log(obj1);
+// obj1.render()
+//
+// function Header() {
+  // console.log('get from proto: ', `{ a: ${this.a} }`)
+// }
+// Header.b = 2
+//
+// console.log("-----")
+// const obj2 = obj1.orb(Header)
+// obj2.up()
+// console.log("-----")
+// link.down()
+// console.timeEnd('test')
+// console.log("-----")
+// obj2.update('a', 6)
+// console.log(obj1)
+// console.log(obj2)
 
-function Header() {
-  console.log('get from proto: ', `{ a: ${this.a} }`)
-}
-Header.b = 2
-
-console.log("-----")
-const obj2 = obj1.orb(Header)
-obj2.up()
-console.log("-----")
-link.down()
-console.timeEnd('test')
-console.log("-----")
-obj2.update('a', 6)
-console.log(obj1)
-console.log(obj2)
+module.exports = link;

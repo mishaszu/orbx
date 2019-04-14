@@ -4,7 +4,8 @@
   "description": "Base library to provide utility for building Javascript projects based on OLOO pattern.",
   "main": "src/index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "node ./test",
+    "test:watch": "nodemon ./test"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,8 @@
   ],
   "author": "mishaszu@gmail.com",
   "license": "MIT",
-  "homepage": "https://bitbucket.org/Mishaszu/link-orb#readme"
+  "homepage": "https://bitbucket.org/Mishaszu/link-orb#readme",
+  "devDependencies": {
+    "node-tee": "^0.2.1"
+  }
 }
