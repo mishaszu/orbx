@@ -1,7 +1,7 @@
 const { Tee } = require('node-tee');
 const link = require('./core.orb');
 
-const myTee = Tee.new('Testing core component');
+const myTee = Tee.new('Core component');
 myTee.case('Should establish simple link between object orbs', expect => {
   const linker = link.spawn();
   const str1 = 'test1';
@@ -28,12 +28,18 @@ myTee.case('Should estabilsh simple link between function orbs', expect => {
 
 myTee.case('Should create clean linkers', expect => {
   const linker1 = link.spawn();
-  const orb1 = linker1.orb({a: 1});
+  const orb1 = linker1.orb({ a: 1 });
   const linker2 = link.spawn();
-  const orb2 = linker2.orb({b: 2});
+  const orb2 = linker2.orb({ b: 2 });
 
   expect(orb1.__proto__.orbs.length).toBe(1);
   expect(orb2.__proto__.orbs.length).toBe(1);
+});
+
+myTee.case('Should access itself properties', expect => {
+  const a = function Test() {console.log(this.a)}
+  a.a = 2;
+  console.log(a.bind(a))
 })
 
 module.exports = myTee;
