@@ -61,4 +61,24 @@ myTee.case('Should create correct amount of childs', expect => {
   expect(linker2.orbs.length).toBe(0);
 });
 
+myTee.case('Should add levels', expect => {
+  const linker1 = link.spawn();
+  const orb1 = linker1.orb(() => {});
+  const orb2 = linker1.orb(() => {});
+  const orb1a = orb1.orb(() => {});
+  const orb1b = orb1.orb(() => {});
+  const orb1aa = orb1a.orb(() => {});
+
+  expect(orb1.lvl).toBe(1);
+  expect(orb1.id).toBe(0);
+  expect(orb2.lvl).toBe(1);
+  expect(orb2.id).toBe(1);
+  expect(orb1a.lvl).toBe(2);
+  expect(orb1a.id).toBe(0);
+  expect(orb1b.lvl).toBe(2);
+  expect(orb1b.id).toBe(1);
+  expect(orb1aa.lvl).toBe(3);
+  expect(orb1aa.id).toBe(0);
+});
+
 module.exports = myTee;
