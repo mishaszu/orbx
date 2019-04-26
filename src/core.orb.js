@@ -4,6 +4,7 @@ const link = {};
 link.__proto__.spawn = function spawn() {
   return Object.assign({ ...this }, { orbs: [] });
 };
+
 link.__proto__.orb = function orb(input) {
   Object.keys(input).forEach(k => {
     if (this[k] !== undefined) {
