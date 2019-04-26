@@ -1,5 +1,4 @@
 const { Pot } = require('node-tee');
-require('../src/prelude.orb')
 
 const CoreTee = require('../src/core.orb.test');
 

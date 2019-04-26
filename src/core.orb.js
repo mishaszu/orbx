@@ -1,4 +1,6 @@
-// TODO link functions should be in prototype
+const { registerPrimitivesEnum } = require('orbx-enum');
+registerPrimitivesEnum();
+
 const link = {};
 
 link.__proto__.spawn = function spawn() {

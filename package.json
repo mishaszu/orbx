@@ -20,5 +20,8 @@
   "homepage": "https://bitbucket.org/Mishaszu/link-orb#readme",
   "devDependencies": {
     "node-tee": "^0.2.1"
+  },
+  "dependencies": {
+    "orbx-enum": "^0.1.0"
   }
 }
