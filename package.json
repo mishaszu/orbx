@@ -1,6 +1,6 @@
 {
-  "name": "link-orb",
-  "version": "0.1.0",
+  "name": "orbx",
+  "version": "0.1.2",
   "description": "Base library to provide utility for building Javascript projects based on OLOO pattern.",
   "main": "src/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/Mishaszu/link-orb.git"
+    "url": "https://github.com/mishaszu/orbx.git"
   },
   "keywords": [
     "javascript",
@@ -17,7 +17,7 @@
   ],
   "author": "mishaszu@gmail.com",
   "license": "MIT",
-  "homepage": "https://bitbucket.org/Mishaszu/link-orb#readme",
+  "homepage": "https://github.com/mishaszu/orbx.git#readme",
   "devDependencies": {
     "node-tee": "^0.2.1"
   },
