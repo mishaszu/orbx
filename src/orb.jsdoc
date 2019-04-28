@@ -1,6 +1,6 @@
 /**
  * @module orb
- * @description orb is base orbx building block that allow to:<br>
+ * @description orb is base orbx building block that allows to:<br>
  * - store functionality<br>
  * - interact with its proto<br>
  * - interact with its children

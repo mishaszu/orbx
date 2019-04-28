@@ -1,5 +1,5 @@
 /**
- * @file index.js main orbx files combining all functionality and providing orbx objec
+ * @file index.js main orbx files combining all functionality and providing orbx object
  * @author mishaszu <mishaszu@gmail.com>
  */
 const core = require('./core.orb');
