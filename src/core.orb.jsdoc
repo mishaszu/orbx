@@ -21,6 +21,14 @@
 
 /**
  * @function
+ * @name exec
+ * @description function execute function binded to orb while creating new orb
+ * @return {Void}
+ * @access public
+ */
+
+/**
+ * @function
  * @name spawn
  * @description Create clean version of orbx object
  * @example

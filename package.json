@@ -22,7 +22,7 @@
   "devDependencies": {
     "docdash": "^1.1.0",
     "jsdoc": "^3.5.5",
-    "node-tee": "^0.2.1"
+    "node-tee": "^0.2.2"
   },
   "dependencies": {
     "orbx-enum": "^0.1.0"

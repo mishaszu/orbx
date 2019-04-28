@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>index.js - Documentation</title>
+    <title>orb.jsdoc - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -31,7 +31,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">index.js</h1>
+    <h1 class="page-title">orb.jsdoc</h1>
     
 
     
@@ -42,17 +42,20 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * @file index.js main orbx files combining all functionality and providing orbx objec
- * @author mishaszu &lt;mishaszu@gmail.com>
+ * @module orb
+ * @description orb is base orbx building block that allow to:&lt;br>
+ * - store functionality&lt;br>
+ * - interact with its proto&lt;br>
+ * - interact with its children
  */
-const core = require('./core.orb');
-const actions = require('./actions.orb');
 
-const orbx = Object.assign(core, actions);
-
-module.exports = {
-  orbx,
-};
+/**
+ * @function
+ * @name exec
+ * @description function execute function binded to orb while creating new orb
+ * @return {Void}
+ * @access public
+ */
 </code></pre>
         </article>
     </section>
