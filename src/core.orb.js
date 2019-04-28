@@ -1,13 +1,13 @@
 const { registerPrimitivesEnum } = require('orbx-enum');
 registerPrimitivesEnum();
 
-const link = {};
+const core = {};
 
-link.__proto__.spawn = function spawn() {
+core.__proto__.spawn = function spawn() {
   return Object.assign({ ...this }, { orbs: [], lvl: 0 });
 };
 
-link.__proto__.orb = function orb(input, record = true) {
+core.__proto__.orb = function orb(input, record = true) {
   Object.keys(input).forEach(k => {
     if (this[k] !== undefined) {
       throw Error(`Key: ${k} exist on parent`);
@@ -26,4 +26,4 @@ link.__proto__.orb = function orb(input, record = true) {
   return newOrb;
 };
 
-module.exports = link;
+module.exports = core;
