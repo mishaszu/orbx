@@ -43,7 +43,7 @@ myTee.case('Should access itself properties', expect => {
   a.a = 2;
   const orb1 = linker1.orb(a);
   expect(orb1.name).toBe('Test');
-  expect(orb1.exec()).toBe(2);
+  expect(orb1.render()).toBe(2);
 });
 
 myTee.case('Should create correct amount of childs', expect => {
