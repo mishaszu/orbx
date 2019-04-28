@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "test": "node ./test",
-    "test:watch": "nodemon ./test"
+    "test:watch": "nodemon ./test",
+    "docs": "doxdox 'src/**/*.js' --layout bootstrap --output index.html"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
     "node-tee": "^0.2.1"
   },
   "dependencies": {
+    "doxdox": "^3.0.0",
     "orbx-enum": "^0.1.0"
   }
 }
