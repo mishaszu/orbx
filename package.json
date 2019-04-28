@@ -6,7 +6,7 @@
   "scripts": {
     "test": "node ./test",
     "test:watch": "nodemon ./test",
-    "docs": "doxdox 'src/**/*.js' --layout bootstrap --output index.html"
+    "docs": "npx jsdoc -c jsdoc.json ./README.md"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,9 @@
   "license": "MIT",
   "homepage": "https://github.com/mishaszu/orbx.git#readme",
   "devDependencies": {
-    "node-tee": "^0.2.1"
+    "docdash": "^1.1.0",
+    "jsdoc": "^3.5.5",
+    "node-tee": "^0.2.2"
   },
   "dependencies": {
     "orbx-enum": "^0.1.0"

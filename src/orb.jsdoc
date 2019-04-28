@@ -1,0 +1,15 @@
+/**
+ * @module orb
+ * @description orb is base orbx building block that allows to:<br>
+ * - store functionality<br>
+ * - interact with its proto<br>
+ * - interact with its children
+ */
+
+/**
+ * @function
+ * @name exec
+ * @description function execute function binded to orb while creating new orb
+ * @return {Void}
+ * @access public
+ */
