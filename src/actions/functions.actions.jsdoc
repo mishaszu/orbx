@@ -1,0 +1,68 @@
+/**
+ * @module Actions/Functions
+ * @description Actions/Functions module contains all actions that maight be executed on functions
+ */
+
+/**
+ * @function
+ * @name coldFn
+ * @description Take function and attache it to current object binding it. Executing function will change only the object and not its child. Other words if you call this function from child it will change prototype object value.<br>NOTE: doesn't work on arrow function
+ * @example
+ * const test = Object.create(actions);
+ * test.value = 0;
+ * test.coldFn(function add(){ this.value++ });
+ * test.add(); // test.value === 1;
+ * const test2 = Object.create(test);
+ * test2.add() // test2.value === undefined && test.value === 2
+ * @param {Function} fn callback function that will be set by given name
+ * @param {String} name function name if function is anonymus
+ * @return {Void}
+ * @public
+ */
+
+/**
+ * @function
+ * @name hotFn
+ * @description Take function and attache it to current object checking if existing name exists on prototype chain
+ * @example
+ * const test = Object.create(actions);
+ * test.value = 0;
+ * test.hotFn(function add(){ this.value++ });
+ * const test2 = Object.create(test);
+ * test2.value = 0;
+ * test.add() // test.value === 1 && test2.value === 0
+ * test2.add() // test.value === 1 && test2.value === 1
+ * @param {Function} fn callback function that will be set by given name
+ * @param {String} name function name if function is anonymus
+ * @return {Void}
+ * @public
+ */
+
+/**
+ * @function
+ * @name execUp
+ * @description execUp execute 'exec' method on all proto chain
+ * @example
+ * let count = 0;
+ * const orb1 = orbx.spawn();
+ * const orb2 = orb1.orb(function Add1() {count++});
+ * const orb3 = orb2.orb(function Add1() {count++});
+ * const orb4 = orb3.orb(function Add1() {count++});
+ * orb4.execUp(); // count === 3
+ * @return {Void}
+ */
+
+/**
+ * @function
+ * @name execDown
+ * @description execDown execute 'exec' method on all children chain
+ * @example
+ * let count = 0;
+ * const orb1 = orbx.spawn();
+ * const orb2 = orb1.orb(function Add1() {count++});
+ * const orb3 = orb2.orb(function Add1() {count++});
+ * const orb4 = orb3.orb(function Add1() {count++});
+ * const orb5 = orb2.orb(function Add1() {count++});
+ * orb1.execDown(); // count === 4
+ * @return {Void}
+ */

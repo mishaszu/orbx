@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>core.orb.jsdoc - Documentation</title>
+    <title>Actions - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -31,56 +31,136 @@
 
 <div id="main">
     
-    <h1 class="page-title">core.orb.jsdoc</h1>
+    <h1 class="page-title">Actions</h1>
     
 
     
 
 
 
+
+<section>
+
+<header>
     
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>/**
- * @module orbx-core
- * @description Module that provides basic functionality to create `orbx` childs and clean copies
- */
+        
+            
+        
+    
+</header>
 
-/**
- * @function
- * @name orb
- * @description Create new child that add current object to prototype chain + newly passed object. &lt;br> - New object maight be any JS object (function, array, object, string, number).&lt;br> - Function input is binded to `exec` method.&lt;br> - Name property is assigned to `name` of new object.&lt;br> - New object is set as child to its proto. To prevent that pass second argument = false.
- * @example
- * const test = core.spawn();
- * function Component1(){console.log(this.vluae)}
- * Component1.value = 1;
- * const orb1 = test.orb(Component1);
- * orb1.run() // 1;
- * @param {(Function | Array | Object | String | Number)} input
- * @param {Boolean} record flag if input should be add to prototype child or not
- * @return {Void}
- * @access public
- */
+<article>
+    
+        <div class="container-overview">
+        
+            
+                <div class="description">Actions Module contains orbx actions allowing an interactions between prototype and children</div>
+            
 
-/**
- * @function
- * @name exec
- * @description function execute function binded to orb while creating new orb
- * @return {Void}
- * @access public
- */
+            
+                
 
-/**
- * @function
- * @name spawn
- * @description Create clean version of orbx object
- * @example
- *     const test = core.spawn();
- * @access public
- */
-</code></pre>
-        </article>
-    </section>
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="actions_index.jsdoc.html">actions/index.jsdoc</a>, <a href="actions_index.jsdoc.html#line1">line 1</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+        
+        </div>
+    
+
+    
+
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 

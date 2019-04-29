@@ -1,0 +1,24 @@
+/**
+ * @module Actions/Utils
+ * @description Actions/Utils module contains actions's util functionality
+ */
+
+/**
+ * @function
+ * @name findProtoByKey
+ * @description findProtoByKey looking for prototype objects that has provided key
+ * @example
+ * const a = Object.create(actions);
+ * const orbx = Object.assign(orb, a);
+ * const orb1 = orbx.spawn();
+ * function Add1(){};
+ * Add1.value = 1;
+ * const orb2 = orb1.orb(Add1);
+ * function Add2(){};
+ * Add2.foo = 3;
+ * const orb3 = orb2.orb(Add2);
+ * orbx.findProtoByKey('value', orb3).name // 'Add1'
+ * @param {String} key - string that will be used to find Object with such a key
+ * @param {Orb} orb - orb object where search will happen
+ * @return {Orb} returns orb object
+ */

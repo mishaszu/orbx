@@ -3,7 +3,7 @@
  * @author mishaszu <mishaszu@gmail.com>
  */
 const core = require('./core.orb');
-const actions = require('./actions.orb');
+const actions = require('./actions');
 
 const orbx = Object.assign(core, actions);
 
